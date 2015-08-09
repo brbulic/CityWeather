@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D7EBD221B77D09900FBCB4E /* PMWorldWeatherServiceApiProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7EBD211B77D09900FBCB4E /* PMWorldWeatherServiceApiProvider.m */; };
+		0D7EBDA21B77DD4400FBCB4E /* PMCityEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7EBD9F1B77DD4400FBCB4E /* PMCityEntity.m */; };
+		0D7EBDA31B77DD4400FBCB4E /* PMWeatherEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7EBDA11B77DD4400FBCB4E /* PMWeatherEntity.m */; };
+		0D7EBDA71B77E52B00FBCB4E /* PMCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7EBDA61B77E52B00FBCB4E /* PMCity.m */; };
 		0D8D51CF1B77BA49001A6D6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8D51CE1B77BA49001A6D6A /* main.m */; };
 		0D8D51D21B77BA49001A6D6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8D51D11B77BA49001A6D6A /* AppDelegate.m */; };
 		0D8D51D51B77BA49001A6D6A /* CityWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D8D51D31B77BA49001A6D6A /* CityWeather.xcdatamodeld */; };
@@ -16,6 +20,11 @@
 		0D8D51E01B77BA49001A6D6A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D8D51DF1B77BA49001A6D6A /* Images.xcassets */; };
 		0D8D51E31B77BA49001A6D6A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8D51E11B77BA49001A6D6A /* LaunchScreen.xib */; };
 		0D8D51EF1B77BA49001A6D6A /* CityWeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8D51EE1B77BA49001A6D6A /* CityWeatherTests.m */; };
+		0D8D51FF1B77BF6F001A6D6A /* PMPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8D51FE1B77BF6F001A6D6A /* PMPromise.m */; };
+		0D8D52021B77BF8E001A6D6A /* PMPromiseBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8D52011B77BF8E001A6D6A /* PMPromiseBuilder.m */; };
+		14E66433D59D0DEC25BA96A7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32500372A7E274660E41AC10 /* libPods.a */; };
+		846F757B0948A574A028EEAD /* PMWorldWeatherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 846F794FC8B06FDA8F833C1B /* PMWorldWeatherService.m */; };
+		846F788BE1FD52A0E8A8BAC9 /* PMCoreDataCityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 846F7156625FDECAEB9F5C99 /* PMCoreDataCityProvider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +38,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05BE660C9101C12E960FED75 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		0C5D67E80467288B7B7CA937 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		0D7EBD1F1B77D06C00FBCB4E /* ICityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICityProvider.h; sourceTree = "<group>"; };
+		0D7EBD201B77D09900FBCB4E /* PMWorldWeatherServiceApiProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMWorldWeatherServiceApiProvider.h; sourceTree = "<group>"; };
+		0D7EBD211B77D09900FBCB4E /* PMWorldWeatherServiceApiProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMWorldWeatherServiceApiProvider.m; sourceTree = "<group>"; };
+		0D7EBD9E1B77DD4400FBCB4E /* PMCityEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMCityEntity.h; sourceTree = "<group>"; };
+		0D7EBD9F1B77DD4400FBCB4E /* PMCityEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMCityEntity.m; sourceTree = "<group>"; };
+		0D7EBDA01B77DD4400FBCB4E /* PMWeatherEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMWeatherEntity.h; sourceTree = "<group>"; };
+		0D7EBDA11B77DD4400FBCB4E /* PMWeatherEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMWeatherEntity.m; sourceTree = "<group>"; };
+		0D7EBDA51B77E52B00FBCB4E /* PMCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMCity.h; sourceTree = "<group>"; };
+		0D7EBDA61B77E52B00FBCB4E /* PMCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMCity.m; sourceTree = "<group>"; };
 		0D8D51C91B77BA49001A6D6A /* CityWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8D51CD1B77BA49001A6D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D8D51CE1B77BA49001A6D6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,6 +65,17 @@
 		0D8D51E81B77BA49001A6D6A /* CityWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8D51ED1B77BA49001A6D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D8D51EE1B77BA49001A6D6A /* CityWeatherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityWeatherTests.m; sourceTree = "<group>"; };
+		0D8D51FD1B77BF6F001A6D6A /* PMPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMPromise.h; sourceTree = "<group>"; };
+		0D8D51FE1B77BF6F001A6D6A /* PMPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMPromise.m; sourceTree = "<group>"; };
+		0D8D52001B77BF8E001A6D6A /* PMPromiseBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMPromiseBuilder.h; sourceTree = "<group>"; };
+		0D8D52011B77BF8E001A6D6A /* PMPromiseBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMPromiseBuilder.m; sourceTree = "<group>"; };
+		32500372A7E274660E41AC10 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		846F7156625FDECAEB9F5C99 /* PMCoreDataCityProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMCoreDataCityProvider.m; sourceTree = "<group>"; };
+		846F717359D5095027ABDDF4 /* PMWorldWeatherService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMWorldWeatherService.h; sourceTree = "<group>"; };
+		846F75E2B6CE274469517714 /* IWeatherService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWeatherService.h; sourceTree = "<group>"; };
+		846F794FC8B06FDA8F833C1B /* PMWorldWeatherService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMWorldWeatherService.m; sourceTree = "<group>"; };
+		846F7A526B9D12503D704F1E /* PMCoreDataCityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMCoreDataCityProvider.h; sourceTree = "<group>"; };
+		846F7FB5F980784923FE28B8 /* ICity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICity.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14E66433D59D0DEC25BA96A7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,12 +97,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D7EBD351B77DD4400FBCB4E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0D7EBD9E1B77DD4400FBCB4E /* PMCityEntity.h */,
+				0D7EBD9F1B77DD4400FBCB4E /* PMCityEntity.m */,
+				0D7EBDA01B77DD4400FBCB4E /* PMWeatherEntity.h */,
+				0D7EBDA11B77DD4400FBCB4E /* PMWeatherEntity.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		0D7EBDA41B77DDD900FBCB4E /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				846F7FB5F980784923FE28B8 /* ICity.h */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
 		0D8D51C01B77BA49001A6D6A = {
 			isa = PBXGroup;
 			children = (
 				0D8D51CB1B77BA49001A6D6A /* CityWeather */,
 				0D8D51EB1B77BA49001A6D6A /* CityWeatherTests */,
 				0D8D51CA1B77BA49001A6D6A /* Products */,
+				3FBF8D95E526DAB35DF0FCE8 /* Pods */,
+				3D1404002DFB5E61C6EF26E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +139,8 @@
 		0D8D51CB1B77BA49001A6D6A /* CityWeather */ = {
 			isa = PBXGroup;
 			children = (
+				0D8D51FC1B77BF39001A6D6A /* Framework */,
+				0D8D51F81B77BB8F001A6D6A /* Infrastructure */,
 				0D8D51D01B77BA49001A6D6A /* AppDelegate.h */,
 				0D8D51D11B77BA49001A6D6A /* AppDelegate.m */,
 				0D8D51D61B77BA49001A6D6A /* MasterViewController.h */,
@@ -127,6 +182,93 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0D8D51F81B77BB8F001A6D6A /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				0D8D51F91B77BB8F001A6D6A /* Models */,
+				0D8D51FA1B77BB8F001A6D6A /* Providers */,
+				846F7BFBB727E8FFD91CD1DA /* Services */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		0D8D51F91B77BB8F001A6D6A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0D7EBDA41B77DDD900FBCB4E /* Interfaces */,
+				0D7EBD351B77DD4400FBCB4E /* CoreData */,
+				0D7EBDA51B77E52B00FBCB4E /* PMCity.h */,
+				0D7EBDA61B77E52B00FBCB4E /* PMCity.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0D8D51FA1B77BB8F001A6D6A /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				0D8D52041B77C5C0001A6D6A /* Interfaces */,
+				0D7EBD201B77D09900FBCB4E /* PMWorldWeatherServiceApiProvider.h */,
+				0D7EBD211B77D09900FBCB4E /* PMWorldWeatherServiceApiProvider.m */,
+				846F7156625FDECAEB9F5C99 /* PMCoreDataCityProvider.m */,
+				846F7A526B9D12503D704F1E /* PMCoreDataCityProvider.h */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		0D8D51FC1B77BF39001A6D6A /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				0D8D51FD1B77BF6F001A6D6A /* PMPromise.h */,
+				0D8D51FE1B77BF6F001A6D6A /* PMPromise.m */,
+				0D8D52001B77BF8E001A6D6A /* PMPromiseBuilder.h */,
+				0D8D52011B77BF8E001A6D6A /* PMPromiseBuilder.m */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		0D8D52041B77C5C0001A6D6A /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				0D7EBD1F1B77D06C00FBCB4E /* ICityProvider.h */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		3D1404002DFB5E61C6EF26E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32500372A7E274660E41AC10 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3FBF8D95E526DAB35DF0FCE8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C5D67E80467288B7B7CA937 /* Pods.debug.xcconfig */,
+				05BE660C9101C12E960FED75 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		846F7BFBB727E8FFD91CD1DA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				846F7F335B3BA1C57325258B /* Interfaces */,
+				846F717359D5095027ABDDF4 /* PMWorldWeatherService.h */,
+				846F794FC8B06FDA8F833C1B /* PMWorldWeatherService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		846F7F335B3BA1C57325258B /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				846F75E2B6CE274469517714 /* IWeatherService.h */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +276,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D8D51F21B77BA49001A6D6A /* Build configuration list for PBXNativeTarget "CityWeather" */;
 			buildPhases = (
+				9F957013BC62DD13A876CAA1 /* Check Pods Manifest.lock */,
 				0D8D51C51B77BA49001A6D6A /* Sources */,
 				0D8D51C61B77BA49001A6D6A /* Frameworks */,
 				0D8D51C71B77BA49001A6D6A /* Resources */,
+				6A196CC0E24E759043C8F6C4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,16 +366,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6A196CC0E24E759043C8F6C4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F957013BC62DD13A876CAA1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0D8D51C51B77BA49001A6D6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D8D51FF1B77BF6F001A6D6A /* PMPromise.m in Sources */,
+				0D7EBDA21B77DD4400FBCB4E /* PMCityEntity.m in Sources */,
 				0D8D51DB1B77BA49001A6D6A /* DetailViewController.m in Sources */,
+				0D8D52021B77BF8E001A6D6A /* PMPromiseBuilder.m in Sources */,
+				0D7EBDA71B77E52B00FBCB4E /* PMCity.m in Sources */,
+				0D7EBD221B77D09900FBCB4E /* PMWorldWeatherServiceApiProvider.m in Sources */,
 				0D8D51D81B77BA49001A6D6A /* MasterViewController.m in Sources */,
+				0D7EBDA31B77DD4400FBCB4E /* PMWeatherEntity.m in Sources */,
 				0D8D51D51B77BA49001A6D6A /* CityWeather.xcdatamodeld in Sources */,
 				0D8D51D21B77BA49001A6D6A /* AppDelegate.m in Sources */,
 				0D8D51CF1B77BA49001A6D6A /* main.m in Sources */,
+				846F788BE1FD52A0E8A8BAC9 /* PMCoreDataCityProvider.m in Sources */,
+				846F757B0948A574A028EEAD /* PMWorldWeatherService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +542,7 @@
 		};
 		0D8D51F31B77BA49001A6D6A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C5D67E80467288B7B7CA937 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CityWeather/Info.plist;
@@ -367,6 +553,7 @@
 		};
 		0D8D51F41B77BA49001A6D6A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05BE660C9101C12E960FED75 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CityWeather/Info.plist;
@@ -428,6 +615,7 @@
 				0D8D51F41B77BA49001A6D6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D8D51F51B77BA49001A6D6A /* Build configuration list for PBXNativeTarget "CityWeatherTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +624,7 @@
 				0D8D51F71B77BA49001A6D6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
