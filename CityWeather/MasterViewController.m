@@ -13,6 +13,7 @@
 #import "ICityProvider.h"
 #import "PMCity.h"
 #import "PMCoreDataCityProvider.h"
+#import "PMCityTableViewCell.h"
 
 @interface MasterViewController ()
 
@@ -44,9 +45,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"PMCityTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"CityCell"];
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+//    self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 
     self.cities = [self.cityProvider getCities];
@@ -58,18 +61,14 @@
     });
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)insertNewObject:(id)sender {
+    
     PMCity * city = [PMCity new];
-    city.name = [NSString stringWithFormat:@"Brlje - %@", [NSDate date]];
-    city.state = @"Brlje state";
-    city.country = @"Croeisha";
+    city.name = @"Split",
+    city.country = @"Croatia";
     
     [self.cityProvider addCity:city];
+    
     [self reloadData];
 }
 
@@ -97,7 +96,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CityCell" forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
@@ -122,8 +121,10 @@
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    PMCityTableViewCell * cityCell = (PMCityTableViewCell *)cell;
+    
     id<ICity> city = self.cities[indexPath.row];
-    cell.textLabel.text = [city name];
+    [cityCell setCity:city withPromise:[self.weatherProvider fetchWeatherForCity:[city name]]];
 }
 
 - (id <ICityProvider>)cityProvider {
@@ -133,17 +134,5 @@
 
     return _cityProvider;
 }
-
-#pragma mark - Fetched results controller
-
-/*
-// Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed. 
- 
- - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
-{
-    // In the simplest, most efficient, case, reload the table view.
-    [self.tableView reloadData];
-}
- */
 
 @end

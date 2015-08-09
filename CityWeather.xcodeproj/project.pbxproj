@@ -11,6 +11,10 @@
 		0D7EBDA21B77DD4400FBCB4E /* PMCityEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7EBD9F1B77DD4400FBCB4E /* PMCityEntity.m */; };
 		0D7EBDA31B77DD4400FBCB4E /* PMWeatherEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7EBDA11B77DD4400FBCB4E /* PMWeatherEntity.m */; };
 		0D7EBDA71B77E52B00FBCB4E /* PMCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7EBDA61B77E52B00FBCB4E /* PMCity.m */; };
+		0D7EBDB11B780B5100FBCB4E /* PMCityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7EBDAF1B780B5100FBCB4E /* PMCityTableViewCell.m */; };
+		0D7EBDB21B780B5100FBCB4E /* PMCityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D7EBDB01B780B5100FBCB4E /* PMCityTableViewCell.xib */; };
+		0D7EBDB51B7815E500FBCB4E /* PMAddCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7EBDB41B7815E500FBCB4E /* PMAddCityViewController.m */; };
+		0D7EBDB81B7817EE00FBCB4E /* PMWorldWeatherCityQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7EBDB71B7817EE00FBCB4E /* PMWorldWeatherCityQuery.m */; };
 		0D8D51CF1B77BA49001A6D6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8D51CE1B77BA49001A6D6A /* main.m */; };
 		0D8D51D21B77BA49001A6D6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8D51D11B77BA49001A6D6A /* AppDelegate.m */; };
 		0D8D51D51B77BA49001A6D6A /* CityWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D8D51D31B77BA49001A6D6A /* CityWeather.xcdatamodeld */; };
@@ -49,6 +53,13 @@
 		0D7EBDA11B77DD4400FBCB4E /* PMWeatherEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMWeatherEntity.m; sourceTree = "<group>"; };
 		0D7EBDA51B77E52B00FBCB4E /* PMCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMCity.h; sourceTree = "<group>"; };
 		0D7EBDA61B77E52B00FBCB4E /* PMCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMCity.m; sourceTree = "<group>"; };
+		0D7EBDAE1B780B5100FBCB4E /* PMCityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMCityTableViewCell.h; sourceTree = "<group>"; };
+		0D7EBDAF1B780B5100FBCB4E /* PMCityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMCityTableViewCell.m; sourceTree = "<group>"; };
+		0D7EBDB01B780B5100FBCB4E /* PMCityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMCityTableViewCell.xib; sourceTree = "<group>"; };
+		0D7EBDB31B7815E500FBCB4E /* PMAddCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMAddCityViewController.h; sourceTree = "<group>"; };
+		0D7EBDB41B7815E500FBCB4E /* PMAddCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMAddCityViewController.m; sourceTree = "<group>"; };
+		0D7EBDB61B7817EE00FBCB4E /* PMWorldWeatherCityQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMWorldWeatherCityQuery.h; sourceTree = "<group>"; };
+		0D7EBDB71B7817EE00FBCB4E /* PMWorldWeatherCityQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMWorldWeatherCityQuery.m; sourceTree = "<group>"; };
 		0D8D51C91B77BA49001A6D6A /* CityWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8D51CD1B77BA49001A6D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D8D51CE1B77BA49001A6D6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -72,6 +83,7 @@
 		32500372A7E274660E41AC10 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		846F7156625FDECAEB9F5C99 /* PMCoreDataCityProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMCoreDataCityProvider.m; sourceTree = "<group>"; };
 		846F717359D5095027ABDDF4 /* PMWorldWeatherService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMWorldWeatherService.h; sourceTree = "<group>"; };
+		846F7270D91C7395F87D4123 /* ICityQueryObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICityQueryObject.h; sourceTree = "<group>"; };
 		846F75E2B6CE274469517714 /* IWeatherService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWeatherService.h; sourceTree = "<group>"; };
 		846F794FC8B06FDA8F833C1B /* PMWorldWeatherService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMWorldWeatherService.m; sourceTree = "<group>"; };
 		846F7A526B9D12503D704F1E /* PMCoreDataCityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMCoreDataCityProvider.h; sourceTree = "<group>"; };
@@ -112,8 +124,19 @@
 			isa = PBXGroup;
 			children = (
 				846F7FB5F980784923FE28B8 /* ICity.h */,
+				846F7270D91C7395F87D4123 /* ICityQueryObject.h */,
 			);
 			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		0D7EBDAD1B780B5100FBCB4E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0D7EBDAE1B780B5100FBCB4E /* PMCityTableViewCell.h */,
+				0D7EBDAF1B780B5100FBCB4E /* PMCityTableViewCell.m */,
+				0D7EBDB01B780B5100FBCB4E /* PMCityTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		0D8D51C01B77BA49001A6D6A = {
@@ -139,6 +162,7 @@
 		0D8D51CB1B77BA49001A6D6A /* CityWeather */ = {
 			isa = PBXGroup;
 			children = (
+				0D7EBDAD1B780B5100FBCB4E /* Views */,
 				0D8D51FC1B77BF39001A6D6A /* Framework */,
 				0D8D51F81B77BB8F001A6D6A /* Infrastructure */,
 				0D8D51D01B77BA49001A6D6A /* AppDelegate.h */,
@@ -152,6 +176,8 @@
 				0D8D51E11B77BA49001A6D6A /* LaunchScreen.xib */,
 				0D8D51D31B77BA49001A6D6A /* CityWeather.xcdatamodeld */,
 				0D8D51CC1B77BA49001A6D6A /* Supporting Files */,
+				0D7EBDB31B7815E500FBCB4E /* PMAddCityViewController.h */,
+				0D7EBDB41B7815E500FBCB4E /* PMAddCityViewController.m */,
 			);
 			path = CityWeather;
 			sourceTree = "<group>";
@@ -199,6 +225,8 @@
 				0D7EBD351B77DD4400FBCB4E /* CoreData */,
 				0D7EBDA51B77E52B00FBCB4E /* PMCity.h */,
 				0D7EBDA61B77E52B00FBCB4E /* PMCity.m */,
+				0D7EBDB61B7817EE00FBCB4E /* PMWorldWeatherCityQuery.h */,
+				0D7EBDB71B7817EE00FBCB4E /* PMWorldWeatherCityQuery.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -352,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D8D51DE1B77BA49001A6D6A /* Main.storyboard in Resources */,
+				0D7EBDB21B780B5100FBCB4E /* PMCityTableViewCell.xib in Resources */,
 				0D8D51E31B77BA49001A6D6A /* LaunchScreen.xib in Resources */,
 				0D8D51E01B77BA49001A6D6A /* Images.xcassets in Resources */,
 			);
@@ -407,16 +436,19 @@
 				0D8D51FF1B77BF6F001A6D6A /* PMPromise.m in Sources */,
 				0D7EBDA21B77DD4400FBCB4E /* PMCityEntity.m in Sources */,
 				0D8D51DB1B77BA49001A6D6A /* DetailViewController.m in Sources */,
+				0D7EBDB81B7817EE00FBCB4E /* PMWorldWeatherCityQuery.m in Sources */,
 				0D8D52021B77BF8E001A6D6A /* PMPromiseBuilder.m in Sources */,
 				0D7EBDA71B77E52B00FBCB4E /* PMCity.m in Sources */,
 				0D7EBD221B77D09900FBCB4E /* PMWorldWeatherServiceApiProvider.m in Sources */,
 				0D8D51D81B77BA49001A6D6A /* MasterViewController.m in Sources */,
 				0D7EBDA31B77DD4400FBCB4E /* PMWeatherEntity.m in Sources */,
 				0D8D51D51B77BA49001A6D6A /* CityWeather.xcdatamodeld in Sources */,
+				0D7EBDB11B780B5100FBCB4E /* PMCityTableViewCell.m in Sources */,
 				0D8D51D21B77BA49001A6D6A /* AppDelegate.m in Sources */,
 				0D8D51CF1B77BA49001A6D6A /* main.m in Sources */,
 				846F788BE1FD52A0E8A8BAC9 /* PMCoreDataCityProvider.m in Sources */,
 				846F757B0948A574A028EEAD /* PMWorldWeatherService.m in Sources */,
+				0D7EBDB51B7815E500FBCB4E /* PMAddCityViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

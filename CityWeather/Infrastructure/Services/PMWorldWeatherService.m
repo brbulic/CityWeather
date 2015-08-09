@@ -9,6 +9,8 @@
 #import "PMWorldWeatherService.h"
 #import "PMWorldWeatherServiceApiProvider.h"
 #import "PMPromiseBuilder.h"
+#import "PMWorldWeatherCityQuery.h"
+#import <PMPracticFunction/PMPracticFunction.h>
 
 @interface PMWorldWeatherService()
 
@@ -35,6 +37,23 @@
                 fail(error);
             } else {
                 success(responseObject);
+            }
+        }];
+    }];
+}
+
+- (PMPromise *)citiesForCityQuery:(NSString *)cityNameCandidate {
+    __weak typeof(self) this = self;
+    return [PMPromiseBuilder createNewPromise:^(PMResolvePromise success, PMRejectPromise fail) {
+        [this.apiProvider searchForCity:cityNameCandidate withCallback:^(NSDictionary *responseObject, NSError *error) {
+            if (error) {
+                fail(error);
+            } else {
+                NSArray * results = [responseObject[@"search_api"][@"result"] map:^id(NSDictionary * element) {
+                    return [[PMWorldWeatherCityQuery alloc] initFromJSONDictionary:element];
+                }];
+
+                success(results);
             }
         }];
     }];
