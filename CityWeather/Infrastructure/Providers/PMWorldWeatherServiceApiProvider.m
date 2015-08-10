@@ -29,6 +29,7 @@ static NSString * PMWorldWeatherApiServiceApiKey = @"b3144ae1ced4b06c0bab7347c09
                                @"q": cityName,
                                @"format": @"json",
                                @"num_of_days": @5,
+                               @"tp": @6,
                                @"key": PMWorldWeatherApiServiceApiKey
                               };
     

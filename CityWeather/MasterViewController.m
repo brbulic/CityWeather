@@ -20,6 +20,7 @@
 
 @property (nonatomic, strong) id<IWeatherService> weatherProvider;
 @property (nonatomic, strong) NSArray * cities;
+@property (nonatomic, strong) NSDictionary * weatherInfo;
 
 @end
 
@@ -48,18 +49,9 @@
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
     [self.tableView registerNib:[UINib nibWithNibName:@"PMCityTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"CityCell"];
-
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-//    self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 
     self.cities = [self.cityProvider getCities];
-
-    [self.weatherProvider fetchWeatherForCity:@"Split"].onDone(^(NSDictionary * result) {
-
-    }).onError(^(NSError * error) {
-
-    });
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -74,7 +66,7 @@
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         id<ICity> city = self.cities[indexPath.row];
-        DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
+        DetailViewController *controller = (DetailViewController *)[segue destinationViewController];
         [controller setDetailItem:city];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
@@ -106,6 +98,10 @@
     // Return NO if you do not want the specified item to be editable.
     return YES;
     
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"showDetail" sender:self];
 }
 
 - (void)reloadData {

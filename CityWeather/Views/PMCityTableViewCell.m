@@ -9,6 +9,7 @@
 #import "PMCityTableViewCell.h"
 #import "PMPromise.h"
 #import "ICity.h"
+#import "IWeatherInfo.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
 
 @interface PMCityTableViewCell()
@@ -63,12 +64,10 @@ static NSDateFormatter * _formatter;
     
     __weak typeof(self) this = self;
     [self.loading startAnimating];
-    weather.onDone(^(NSDictionary * weatherData) {
-        NSDictionary * currentCondition = weatherData[@"data"][@"current_condition"][0];
-        NSString* imagePath = currentCondition[@"weatherIconUrl"][0][@"value"];
-    
-        this.tempLabel.text = [NSString stringWithFormat:@"%@ °C", currentCondition[@"temp_C"]];
-        [this.imageLabel setImageWithURL:[NSURL URLWithString:imagePath]];
+    weather.onDone(^(id<IWeatherInfo> weatherData) {
+
+        this.tempLabel.text = weatherData.currentInfo.forecast;
+        [this.imageLabel setImageWithURL:[NSURL URLWithString:weatherData.currentInfo.iconName]];
         
         [this.tempLabel setHidden:NO];
         [this.imageLabel setHidden:NO];

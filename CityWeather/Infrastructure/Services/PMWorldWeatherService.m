@@ -10,6 +10,7 @@
 #import "PMWorldWeatherServiceApiProvider.h"
 #import "PMPromiseBuilder.h"
 #import "PMWorldWeatherCityQuery.h"
+#import "PMWorldWeatherWeatherInfo.h"
 #import <PMPracticFunction/PMPracticFunction.h>
 
 @interface PMWorldWeatherService()
@@ -36,7 +37,9 @@
             if (error) {
                 fail(error);
             } else {
-                success(responseObject);
+                PMWorldWeatherWeatherInfo * info = [[PMWorldWeatherWeatherInfo alloc] initFromJsonDictionary:responseObject[@"data"]];
+                info.cityName = cityName;
+                success(info);
             }
         }];
     }];

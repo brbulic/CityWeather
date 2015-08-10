@@ -1,19 +1,20 @@
 //
-//  PMWorldWeatherDayInfo.m
+//  PMWorldWeatherDailyForecast.m
 //  CityWeather
 //
 //  Created by Bruno Bulić on 10/08/15.
 //  Copyright (c) 2015 Bula doo. All rights reserved.
 //
 
-#import "PMWorldWeatherDayInfo.h"
+#import "PMWorldWeatherDailyForecast.h"
+#import "PMWorldWeatherHourlyForecast.h"
 #import <PMPracticFunction/PMPracticFunction.h>
 
-@implementation PMWorldWeatherDayInfo
+@implementation PMWorldWeatherDailyForecast
 
 static NSDateFormatter * _weatherParserFormatter;
 + (NSDateFormatter *)dateFormatter {
-    NSString * format = @"dd-MM-yyyy";
+    NSString * format = @"yyyy-MM-dd";
     
     if (!_weatherParserFormatter) {
         _weatherParserFormatter = [NSDateFormatter new];
@@ -27,10 +28,11 @@ static NSDateFormatter * _weatherParserFormatter;
 {
     self = [super init];
     if (self) {
+        // UBER api design :S
         self.date = [[[self class] dateFormatter] dateFromString:dict[@"date"]];
         
-        NSArray * hourly = [dict[@"hourly"] map:^id(id element) {
-            
+        self.hourlyWeather = [dict[@"hourly"] map:^id(NSDictionary * element) {
+            return [[PMWorldWeatherHourlyForecast alloc] initFromJsonDictionary:element];
         }];
         
     }

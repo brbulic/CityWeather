@@ -12,9 +12,8 @@
 @interface PMWorldWeatherHourlyForecast : NSObject<IWeather>
 
 @property (nonatomic, strong) NSDate * date;
-@property (nonatomic, strong) NSString * cityName;
 @property (nonatomic, strong) NSString * iconName;
-@property (nonatomic, strong) NSNumber * temperatureCelsius;
+@property (nonatomic, strong) NSString * temperatureCelsius;
 @property (nonatomic, strong) NSString * forecast;
 
 - (instancetype)initFromJsonDictionary:(NSDictionary *)dict;

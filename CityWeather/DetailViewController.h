@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ICity;
+
 @interface DetailViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) id<ICity> detailItem;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
 @end

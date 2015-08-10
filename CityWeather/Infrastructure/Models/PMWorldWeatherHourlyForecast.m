@@ -14,9 +14,14 @@
 {
     self = [super init];
     if (self) {
+        // UBER api design :S
         self.temperatureCelsius = dict[@"tempC"];
+        
+        if (!self.temperatureCelsius) {
+            self.temperatureCelsius = dict[@"temp_C"];
+        }
         self.forecast = dict[@"weatherDesc"][0][@"value"];
-        self.iconName =dict[@"weatherIconUrl"][0][@"value"];
+        self.iconName = dict[@"weatherIconUrl"][0][@"value"];
     }
     return self;
 }

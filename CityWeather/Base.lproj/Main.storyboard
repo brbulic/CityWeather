@@ -23,11 +23,40 @@
         <!--Detail-->
         <scene sceneID="yUG-lL-AsK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
                 <viewController title="Detail" id="JEX-9P-axG" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0hK-3o-TYu"/>
+                        <viewControllerLayoutGuide type="bottom" id="B82-DQ-t6B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GO8-T0-tmp">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="LwH-du-YoM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="JEX-9P-axG" id="6QH-Yw-48w"/>
+                                    <outlet property="delegate" destination="JEX-9P-axG" id="XAx-li-and"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LwH-du-YoM" firstAttribute="top" secondItem="0hK-3o-TYu" secondAttribute="bottom" constant="-64" id="GPH-AT-S9Z"/>
+                            <constraint firstItem="LwH-du-YoM" firstAttribute="leading" secondItem="GO8-T0-tmp" secondAttribute="leadingMargin" constant="-16" id="VYz-Ya-Y17"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LwH-du-YoM" secondAttribute="trailing" constant="-16" id="cVr-7O-KS0"/>
+                            <constraint firstItem="B82-DQ-t6B" firstAttribute="top" secondItem="LwH-du-YoM" secondAttribute="bottom" id="tzi-W0-yos"/>
+                        </constraints>
+                    </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="LwH-du-YoM" id="PBc-Wo-YBM"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="709" y="129"/>
         </scene>
@@ -53,6 +82,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button key="tableFooterView" hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ytE-av-cck">
+                            <rect key="frame" x="-23" y="-15" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <segue destination="JEX-9P-axG" kind="showDetail" identifier="showDetail" id="zVT-8X-BEU"/>
+                            </connections>
+                        </button>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="7bK-jq-Zjz" id="Gho-Na-rnu"/>
@@ -138,4 +177,7 @@
             <point key="canvasLocation" x="-45" y="129"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zVT-8X-BEU"/>
+    </inferredMetricsTieBreakers>
 </document>

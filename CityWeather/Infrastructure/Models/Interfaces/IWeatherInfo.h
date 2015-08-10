@@ -1,5 +1,5 @@
 //
-//  PMWorldWeatherDayInfo.h
+//  IWeatherInfo.h
 //  CityWeather
 //
 //  Created by Bruno Bulić on 10/08/15.
@@ -8,13 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "IWeather.h"
+#import "IWeatherDayInfo.h"
 
-@interface PMWorldWeatherDayInfo : NSObject
+@protocol IWeatherInfo <NSObject>
 
 @property (nonatomic, strong) NSDate * date;
 @property (nonatomic, strong) NSString * cityName;
-@property (nonatomic, strong) NSArray * hourlyInfo;
 
--(instancetype)initFromJsonDictionary:(NSDictionary *)dict;
+@property (nonatomic, strong) id<IWeather> currentInfo;
+@property (nonatomic, strong) NSArray * dailyForecast;
 
 @end
