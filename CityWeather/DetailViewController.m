@@ -45,7 +45,8 @@ static NSString * PMForecastDetailViewCellIdentifier = @"ForecastCell";
 
 - (void)configureView {
     if (self.detailItem) {
-        [self.weatherService fetchWeatherForCity:[self.detailItem name]].onDone(^(id<IWeatherInfo> weatherInfo) {
+        NSString * cityName = [NSString stringWithFormat:@"%@, %@, %@", [self.detailItem name], [self.detailItem state], [self.detailItem country]];
+        [self.weatherService fetchWeatherForCity:cityName].onDone(^(id<IWeatherInfo> weatherInfo) {
             self.dailyForecast = [weatherInfo dailyForecast];
             [self.tableView reloadData];
         }).onError(^(NSError * error) {
@@ -81,8 +82,7 @@ static NSString * PMForecastDetailViewCellIdentifier = @"ForecastCell";
     [super viewDidLoad];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"PMCityForecastTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:PMForecastDetailViewCellIdentifier];
-    
-    [self configureView];
+
 }
 
 @end

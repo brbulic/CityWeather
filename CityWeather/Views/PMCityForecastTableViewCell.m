@@ -60,6 +60,7 @@ static NSDateFormatter * _dayOfWeek;
 - (void)configureWithCity:(id<ICity>)city andForecast:(id<IWeatherDayInfo>)info {
     self.date.text = [[[self class] dateFormatter] stringFromDate:info.date];
     self.dayOfWeek.text = [[[self class] dayOfWeekFormatter] stringFromDate:info.date];
+    self.cityName.text = [NSString stringWithFormat:@"%@, %@", [city name], [city country]];
     
     id<IWeather> morning = [info hourlyWeather][0];
     id<IWeather> noon = [info hourlyWeather][1];

@@ -4,18 +4,8 @@
         <attribute name="country" attributeType="String" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="fk_Weather" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PMWeatherEntity" inverseName="fk_City" inverseEntity="PMWeatherEntity" syncable="YES"/>
-    </entity>
-    <entity name="PMWeatherEntity" representedClassName="PMWeatherEntity" syncable="YES">
-        <attribute name="forecast" attributeType="String" syncable="YES"/>
-        <attribute name="icon" attributeType="String" syncable="YES"/>
-        <attribute name="pressure" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="tempK" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="windKnots" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="fk_City" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="PMCityEntity" inverseName="fk_Weather" inverseEntity="PMCityEntity" syncable="YES"/>
     </entity>
     <elements>
-        <element name="PMCityEntity" positionX="261" positionY="198" width="128" height="105"/>
-        <element name="PMWeatherEntity" positionX="270" positionY="216" width="128" height="135"/>
+        <element name="PMCityEntity" positionX="261" positionY="198" width="128" height="90"/>
     </elements>
 </model>

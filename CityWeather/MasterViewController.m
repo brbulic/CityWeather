@@ -50,8 +50,6 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:@"PMCityTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"CityCell"];
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
-
-    self.cities = [self.cityProvider getCities];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

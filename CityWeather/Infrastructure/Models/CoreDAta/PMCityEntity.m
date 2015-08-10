@@ -15,6 +15,5 @@
 @dynamic name;
 @dynamic state;
 @dynamic country;
-@dynamic fk_Weather;
 
 @end
