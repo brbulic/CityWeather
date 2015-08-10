@@ -21,12 +21,10 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - PMPracticFunction (0.9.8)
-  - SVProgressHUD (1.1.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
   - PMPracticFunction (from `https://github.com/brbulic/PMPracticFunction.git`)
-  - SVProgressHUD (~> 1.1)
 
 EXTERNAL SOURCES:
   PMPracticFunction:
@@ -40,6 +38,5 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   PMPracticFunction: 16fa7bcf979b96a2e318da4854a3885cdf8045ce
-  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 
 COCOAPODS: 0.38.2

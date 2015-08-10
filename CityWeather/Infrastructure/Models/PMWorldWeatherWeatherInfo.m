@@ -13,15 +13,14 @@
 
 @implementation PMWorldWeatherWeatherInfo
 
-- (instancetype)initFromJsonDictionary:(NSDictionary *)dict
-{
-    self = [super init];
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    self = [super initWithDictionary:dictionary];
     if (self) {
         self.date = [NSDate date];
-        self.currentInfo = [[PMWorldWeatherHourlyForecast alloc] initFromJsonDictionary:dict[@"current_condition"][0]];
+        self.currentInfo = [[PMWorldWeatherHourlyForecast alloc] initWithDictionary:dictionary[@"current_condition"][0]];
     
-        self.dailyForecast = [dict[@"weather"] map:^id(NSDictionary * weatherInfo) {
-            return [[PMWorldWeatherDailyForecast alloc] initFromJsonDictionary:weatherInfo];
+        self.dailyForecast = [dictionary[@"weather"] map:^id(NSDictionary * weatherInfo) {
+            return [[PMWorldWeatherDailyForecast alloc] initWithDictionary:weatherInfo];
         }];
     }
     return self;

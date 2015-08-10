@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D11AE401B7895E000A655BA /* PMWorldWeatherWeatherInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D11AE3F1B7895E000A655BA /* PMWorldWeatherWeatherInfo.m */; };
 		0D11AE431B789B3800A655BA /* PMWorldWeatherHourlyForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D11AE421B789B3800A655BA /* PMWorldWeatherHourlyForecast.m */; };
+		0D696A601B78FBDF00F2449B /* PMDomainEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D696A5F1B78FBDF00F2449B /* PMDomainEntity.m */; };
 		0D7EBD221B77D09900FBCB4E /* PMWorldWeatherServiceApiProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7EBD211B77D09900FBCB4E /* PMWorldWeatherServiceApiProvider.m */; };
 		0D7EBDA21B77DD4400FBCB4E /* PMCityEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7EBD9F1B77DD4400FBCB4E /* PMCityEntity.m */; };
 		0D7EBDA71B77E52B00FBCB4E /* PMCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7EBDA61B77E52B00FBCB4E /* PMCity.m */; };
@@ -54,6 +55,8 @@
 		0D11AE3F1B7895E000A655BA /* PMWorldWeatherWeatherInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMWorldWeatherWeatherInfo.m; sourceTree = "<group>"; };
 		0D11AE411B789B3800A655BA /* PMWorldWeatherHourlyForecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMWorldWeatherHourlyForecast.h; sourceTree = "<group>"; };
 		0D11AE421B789B3800A655BA /* PMWorldWeatherHourlyForecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMWorldWeatherHourlyForecast.m; sourceTree = "<group>"; };
+		0D696A5E1B78FBDF00F2449B /* PMDomainEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMDomainEntity.h; sourceTree = "<group>"; };
+		0D696A5F1B78FBDF00F2449B /* PMDomainEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMDomainEntity.m; sourceTree = "<group>"; };
 		0D7EBD1F1B77D06C00FBCB4E /* ICityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICityProvider.h; sourceTree = "<group>"; };
 		0D7EBD201B77D09900FBCB4E /* PMWorldWeatherServiceApiProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMWorldWeatherServiceApiProvider.h; sourceTree = "<group>"; };
 		0D7EBD211B77D09900FBCB4E /* PMWorldWeatherServiceApiProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMWorldWeatherServiceApiProvider.m; sourceTree = "<group>"; };
@@ -279,6 +282,8 @@
 				0D8D51FE1B77BF6F001A6D6A /* PMPromise.m */,
 				0D8D52001B77BF8E001A6D6A /* PMPromiseBuilder.h */,
 				0D8D52011B77BF8E001A6D6A /* PMPromiseBuilder.m */,
+				0D696A5E1B78FBDF00F2449B /* PMDomainEntity.h */,
+				0D696A5F1B78FBDF00F2449B /* PMDomainEntity.m */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -478,6 +483,7 @@
 				0D7EBDB11B780B5100FBCB4E /* PMCityTableViewCell.m in Sources */,
 				0D8D51D21B77BA49001A6D6A /* AppDelegate.m in Sources */,
 				0DC366921B78C1BA00B3F9D4 /* PMWorldWeatherDailyForecast.m in Sources */,
+				0D696A601B78FBDF00F2449B /* PMDomainEntity.m in Sources */,
 				0D8D51CF1B77BA49001A6D6A /* main.m in Sources */,
 				846F788BE1FD52A0E8A8BAC9 /* PMCoreDataCityProvider.m in Sources */,
 				846F757B0948A574A028EEAD /* PMWorldWeatherService.m in Sources */,

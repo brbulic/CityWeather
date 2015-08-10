@@ -12,6 +12,5 @@
 @property (nonatomic, strong) NSString * iconName;
 @property (nonatomic, strong) NSString * temperatureCelsius;
 @property (nonatomic, strong) NSString * forecast;
-@property (nonatomic, strong) NSString * hour;
 
 @end

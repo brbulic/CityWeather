@@ -8,13 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "ICityQueryObject.h"
+#import "PMDomainEntity.h"
 
-@interface PMWorldWeatherCityQuery : NSObject <ICityQueryObject>
+@interface PMWorldWeatherCityQuery : PMDomainEntity <ICityQueryObject>
 
 @property (nonatomic, strong) NSString * name;
 @property (nonatomic, strong) NSString * state;
 @property (nonatomic, strong) NSString * country;
-
-- (instancetype)initFromJSONDictionary:(NSDictionary *)dictionary;
 
 @end

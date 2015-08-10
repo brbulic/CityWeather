@@ -24,15 +24,15 @@ static NSDateFormatter * _weatherParserFormatter;
     return _weatherParserFormatter;
 }
 
-- (instancetype)initFromJsonDictionary:(NSDictionary *)dict
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
     self = [super init];
     if (self) {
         // UBER api design :S
-        self.date = [[[self class] dateFormatter] dateFromString:dict[@"date"]];
+        self.date = [[[self class] dateFormatter] dateFromString:dictionary[@"date"]];
         
-        self.hourlyWeather = [dict[@"hourly"] map:^id(NSDictionary * element) {
-            return [[PMWorldWeatherHourlyForecast alloc] initFromJsonDictionary:element];
+        self.hourlyWeather = [dictionary[@"hourly"] map:^id(NSDictionary * element) {
+            return [[PMWorldWeatherHourlyForecast alloc] initWithDictionary:element];
         }];
         
     }

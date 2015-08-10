@@ -10,8 +10,8 @@
 
 @implementation PMWorldWeatherCityQuery
 
-- (instancetype)initFromJSONDictionary:(NSDictionary *)dictionary {
-    self = [super init];
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    self = [super initWithDictionary:dictionary];
     if (self) {
 
         self.name = dictionary[@"areaName"][0][@"value"];

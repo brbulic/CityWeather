@@ -7,18 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PMDomainEntity.h"
 #import "IWeather.h"
 #import "IWeatherInfo.h"
 
-@interface PMWorldWeatherWeatherInfo : NSObject<IWeatherInfo>
+@interface PMWorldWeatherWeatherInfo : PMDomainEntity<IWeatherInfo>
 
 @property (nonatomic, strong) NSDate * date;
 @property (nonatomic, strong) NSString * cityName;
 
 @property (nonatomic, strong) id<IWeather> currentInfo;
 @property (nonatomic, strong) NSArray * dailyForecast;
-
-           
--(instancetype)initFromJsonDictionary:(NSDictionary *)dict;
 
 @end

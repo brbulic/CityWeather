@@ -10,18 +10,18 @@
 
 @implementation PMWorldWeatherHourlyForecast
 
-- (instancetype)initFromJsonDictionary:(NSDictionary *)dict
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
-    self = [super init];
+    self = [super initWithDictionary:dictionary];
     if (self) {
         // UBER api design :S
-        self.temperatureCelsius = dict[@"tempC"];
+        self.temperatureCelsius = dictionary[@"tempC"];
         
         if (!self.temperatureCelsius) {
-            self.temperatureCelsius = dict[@"temp_C"];
+            self.temperatureCelsius = dictionary[@"temp_C"];
         }
-        self.forecast = dict[@"weatherDesc"][0][@"value"];
-        self.iconName = dict[@"weatherIconUrl"][0][@"value"];
+        self.forecast = dictionary[@"weatherDesc"][0][@"value"];
+        self.iconName = dictionary[@"weatherIconUrl"][0][@"value"];
     }
     return self;
 }

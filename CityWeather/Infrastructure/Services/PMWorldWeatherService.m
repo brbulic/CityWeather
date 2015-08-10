@@ -37,7 +37,7 @@
             if (error) {
                 fail(error);
             } else {
-                PMWorldWeatherWeatherInfo * info = [[PMWorldWeatherWeatherInfo alloc] initFromJsonDictionary:responseObject[@"data"]];
+                PMWorldWeatherWeatherInfo * info = [[PMWorldWeatherWeatherInfo alloc] initWithDictionary:responseObject[@"data"]];
                 info.cityName = cityName;
                 success(info);
             }
@@ -53,7 +53,7 @@
                 fail(error);
             } else {
                 NSArray * results = [responseObject[@"search_api"][@"result"] map:^id(NSDictionary * element) {
-                    return [[PMWorldWeatherCityQuery alloc] initFromJSONDictionary:element];
+                    return [[PMWorldWeatherCityQuery alloc] initWithDictionary:element];
                 }];
 
                 success(results);
