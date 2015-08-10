@@ -83,6 +83,14 @@
 
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     NSString * query = searchBar.text;
+    if (!query || query.length == 0) {
+        [self clear];
+        return;
+    }
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    NSString * query = searchBar.text;
     
     if (self.currentPromise) {
         [self.currentPromise cancel];
@@ -98,10 +106,6 @@
         this.potentialCities = cities;
         [this.tableView reloadData];
     });
-}
-
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-    [self clear];
 }
 
 - (void)clear {

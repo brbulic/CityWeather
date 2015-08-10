@@ -9,7 +9,7 @@
 #import "PMWorldWeatherServiceApiProvider.h"
 
 static NSString * PMWorldWeatherApiServiceCoreUrl = @"http://api.worldweatheronline.com/";
-static NSString * PMWorldWeatherApiServiceApiKey = @"e1e6a1908b516edcb10a9bb6ab0bc";
+static NSString * PMWorldWeatherApiServiceApiKey = @"b3144ae1ced4b06c0bab7347c098f";
 
 
 @implementation PMWorldWeatherServiceApiProvider
