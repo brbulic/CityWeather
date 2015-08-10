@@ -39,6 +39,14 @@
     return [_context executeFetchRequest:fr error:nil];
 }
 
+- (id<ICity>)findCityByQuery:(id<ICity>)city {
+    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"name=%@ AND state=%@ AND country=%@", [city name], [city state], [city country]];
+    
+    NSFetchRequest * fr = [NSFetchRequest fetchRequestWithEntityName:@"PMCityEntity"];
+    [fr setPredicate:predicate];
+    return [[_context executeFetchRequest:fr error:nil] firstObject];
+}
+
 - (id <ICity>)addCity:(id <ICity>)city {
     PMCityEntity * entity = [NSEntityDescription insertNewObjectForEntityForName:@"PMCityEntity" inManagedObjectContext:_context];
 

@@ -14,6 +14,7 @@
 #import "PMCity.h"
 #import "PMCoreDataCityProvider.h"
 #import "PMCityTableViewCell.h"
+#import "PMAddCityViewController.h"
 
 @interface MasterViewController ()
 
@@ -61,13 +62,8 @@
     });
 }
 
-- (void)insertNewObject:(id)sender {
-    
-    PMCity * city = [PMCity new];
-    city.name = @"Split",
-    city.country = @"Croatia";
-    
-    [self.cityProvider addCity:city];
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     
     [self reloadData];
 }
@@ -82,6 +78,11 @@
         [controller setDetailItem:city];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
+    }
+    
+    if ([[segue identifier] isEqualToString:@"addCity"]) {
+        PMAddCityViewController * addCityVc = (PMAddCityViewController *)[segue destinationViewController];
+        [addCityVc setManagedContext:self.managedObjectContext];
     }
 }
 

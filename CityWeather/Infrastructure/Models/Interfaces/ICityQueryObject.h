@@ -3,12 +3,14 @@
 // Copyright (c) 2015 Bula doo. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "ICity.h"
 
-@protocol ICityQueryObject <NSObject>
+@protocol ICityQueryObject <ICity>
 
 @property (nonatomic, strong) NSString * name;
 @property (nonatomic, strong) NSString * state;
 @property (nonatomic, strong) NSString * country;
+
+- (NSString *)stringValue;
 
 @end

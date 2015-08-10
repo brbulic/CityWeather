@@ -22,4 +22,8 @@
     return self;
 }
 
+- (NSString *)stringValue {
+    return [NSString stringWithFormat:@"%@, %@, %@", self.name, self.state, self.country];
+}
+
 @end

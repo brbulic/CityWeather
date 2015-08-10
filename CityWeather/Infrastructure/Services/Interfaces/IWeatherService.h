@@ -11,6 +11,6 @@
 @protocol IWeatherService <NSObject>
 
 - (PMPromise *)fetchWeatherForCity:(NSString *)cityName;
-- (PMPromise *)citiesForCityQuery:(NSString *)cityNameCandidate;
+- (PMPromise *)fetchCitiesForCityQuery:(NSString *)cityNameCandidate;
 
 @end

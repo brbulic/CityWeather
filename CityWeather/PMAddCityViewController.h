@@ -10,4 +10,6 @@
 
 @interface PMAddCityViewController : UIViewController
 
+- (void)setManagedContext:(NSManagedObjectContext *)context;
+
 @end

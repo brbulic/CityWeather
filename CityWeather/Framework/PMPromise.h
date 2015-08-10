@@ -13,4 +13,6 @@
 @property (nonatomic, readonly, getter=onDoneInvoked) PMPromise * (^onDone)(PMResolvePromise resolve);
 @property (nonatomic, readonly, getter=onErrorInvoked) PMPromise * (^onError)(PMRejectPromise reject);
 
+- (void)cancel;
+
 @end

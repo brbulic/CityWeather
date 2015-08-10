@@ -19,6 +19,8 @@
 - (NSArray *)getCitiesByName:(NSString *)city;
 
 - (id<ICity>)addCity:(id<ICity>)city;
+- (id<ICity>)findCityByQuery:(id<ICity>)city;
+
 - (BOOL)removeCity:(id<ICity>)city;
 
 @end

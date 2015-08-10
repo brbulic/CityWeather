@@ -42,7 +42,7 @@
     }];
 }
 
-- (PMPromise *)citiesForCityQuery:(NSString *)cityNameCandidate {
+- (PMPromise *)fetchCitiesForCityQuery:(NSString *)cityNameCandidate {
     __weak typeof(self) this = self;
     return [PMPromiseBuilder createNewPromise:^(PMResolvePromise success, PMRejectPromise fail) {
         [this.apiProvider searchForCity:cityNameCandidate withCallback:^(NSDictionary *responseObject, NSError *error) {

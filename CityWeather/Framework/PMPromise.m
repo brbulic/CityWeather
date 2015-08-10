@@ -15,7 +15,9 @@
 
 @end
 
-@implementation PMPromise
+@implementation PMPromise {
+    BOOL _cancel;
+}
 
 - (instancetype)init
 {
@@ -44,13 +46,21 @@
     };
 }
 
+- (void)cancel {
+    _cancel = YES;
+}
+
 - (void)invokeOnDone:(id)object {
+    if (_cancel) return;
+    
     if (self.onDoneInternalCallback) {
         self.onDoneInternalCallback(object);
     }
 }
 
 - (void)invokeOnError:(NSError *)object {
+    if (_cancel) return;
+    
     if (self.onErrorInternalCallback) {
         self.onErrorInternalCallback(object);
     }
