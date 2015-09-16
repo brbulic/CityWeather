@@ -38,7 +38,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.potentialCities = [NSArray array];
+    self.potentialCities = @[];
 }
 
 - (void)setManagedContext:(NSManagedObjectContext *)context {
@@ -109,7 +109,7 @@
 }
 
 - (void)clear {
-    self.potentialCities = [NSArray array];
+    self.potentialCities = @[];
     [self.tableView reloadData];
 }
     

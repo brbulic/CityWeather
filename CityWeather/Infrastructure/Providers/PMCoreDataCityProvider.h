@@ -8,6 +8,6 @@
 
 @interface PMCoreDataCityProvider : NSObject<ICityProvider>
 
-- (instancetype)initWithManagedContext:(NSManagedObjectContext *)context;
+- (instancetype)initWithManagedContext:(NSManagedObjectContext *)context NS_DESIGNATED_INITIALIZER;
 
 @end

@@ -10,6 +10,6 @@
 
 @interface PMCityEntity (CustomGetters)
 
-- (NSString *)stringValue;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *stringValue;
 
 @end
