@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol ICity;
-
 @interface DetailViewController : UIViewController
 
 @property (strong, nonatomic) id<ICity> detailItem;

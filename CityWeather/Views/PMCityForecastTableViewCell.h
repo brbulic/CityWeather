@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ICity.h"
-#import "IWeather.h"
 #import "IWeatherDayInfo.h"
 
 @interface PMCityForecastTableViewCell : UITableViewCell

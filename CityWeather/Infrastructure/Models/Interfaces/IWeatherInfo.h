@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "IWeather.h"
 #import "IWeatherDayInfo.h"
 
 @protocol IWeatherInfo <NSObject>

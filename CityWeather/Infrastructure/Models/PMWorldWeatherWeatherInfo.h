@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "PMDomainEntity.h"
-#import "IWeather.h"
 #import "IWeatherInfo.h"
 
 @interface PMWorldWeatherWeatherInfo : PMDomainEntity<IWeatherInfo>

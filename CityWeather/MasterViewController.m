@@ -11,7 +11,6 @@
 #import "IWeatherService.h"
 #import "PMWorldWeatherService.h"
 #import "ICityProvider.h"
-#import "PMCity.h"
 #import "PMCoreDataCityProvider.h"
 #import "PMCityTableViewCell.h"
 #import "PMAddCityViewController.h"

@@ -1,0 +1,15 @@
+//
+//  CityWeather-Prefix.pch
+//  CityWeather
+//
+//  Created by Bruno Bulić on 16/09/15.
+//  Copyright (c) 2015 Bula doo. All rights reserved.
+//
+
+#ifndef CityWeather_CityWeather_Prefix_pch
+#define CityWeather_CityWeather_Prefix_pch
+
+#import <Foundation/Foundation.h>
+#import "CityWeather-Swift.h"
+
+#endif

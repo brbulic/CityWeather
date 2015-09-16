@@ -7,14 +7,14 @@
 //
 
 #import <CoreData/CoreData.h>
-#import "ICity.h"
+#import "CityWeather-Swift.h"
 
 @class PMWeatherEntity;
 
 @interface PMCityEntity : NSManagedObject<ICity>
 
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSString * state;
-@property (nonatomic, retain) NSString * country;
+@property (nonatomic, copy) NSString * name;
+@property (nonatomic, copy) NSString * state;
+@property (nonatomic, copy) NSString * country;
 
 @end

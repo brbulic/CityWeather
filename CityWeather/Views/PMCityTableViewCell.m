@@ -8,7 +8,6 @@
 
 #import "PMCityTableViewCell.h"
 #import "PMPromise.h"
-#import "ICity.h"
 #import "IWeatherInfo.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
 

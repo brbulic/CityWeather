@@ -9,14 +9,15 @@
 /* Begin PBXBuildFile section */
 		0D11AE401B7895E000A655BA /* PMWorldWeatherWeatherInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D11AE3F1B7895E000A655BA /* PMWorldWeatherWeatherInfo.m */; };
 		0D11AE431B789B3800A655BA /* PMWorldWeatherHourlyForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D11AE421B789B3800A655BA /* PMWorldWeatherHourlyForecast.m */; };
-		0D696A601B78FBDF00F2449B /* PMDomainEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D696A5F1B78FBDF00F2449B /* PMDomainEntity.m */; };
 		0D7EBD221B77D09900FBCB4E /* PMWorldWeatherServiceApiProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7EBD211B77D09900FBCB4E /* PMWorldWeatherServiceApiProvider.m */; };
 		0D7EBDA21B77DD4400FBCB4E /* PMCityEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7EBD9F1B77DD4400FBCB4E /* PMCityEntity.m */; };
-		0D7EBDA71B77E52B00FBCB4E /* PMCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7EBDA61B77E52B00FBCB4E /* PMCity.m */; };
 		0D7EBDB11B780B5100FBCB4E /* PMCityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7EBDAF1B780B5100FBCB4E /* PMCityTableViewCell.m */; };
 		0D7EBDB21B780B5100FBCB4E /* PMCityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D7EBDB01B780B5100FBCB4E /* PMCityTableViewCell.xib */; };
 		0D7EBDB51B7815E500FBCB4E /* PMAddCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7EBDB41B7815E500FBCB4E /* PMAddCityViewController.m */; };
 		0D7EBDB81B7817EE00FBCB4E /* PMWorldWeatherCityQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7EBDB71B7817EE00FBCB4E /* PMWorldWeatherCityQuery.m */; };
+		0D88065B1BA9F436002542CE /* ICity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D88065A1BA9F436002542CE /* ICity.swift */; };
+		0D8806611BA9FAE4002542CE /* PMCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8806601BA9FAE4002542CE /* PMCity.swift */; };
+		0D8806641BA9FE5A002542CE /* PMDomainEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8806631BA9FE5A002542CE /* PMDomainEntity.m */; };
 		0D8D51CF1B77BA49001A6D6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8D51CE1B77BA49001A6D6A /* main.m */; };
 		0D8D51D21B77BA49001A6D6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8D51D11B77BA49001A6D6A /* AppDelegate.m */; };
 		0D8D51D51B77BA49001A6D6A /* CityWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D8D51D31B77BA49001A6D6A /* CityWeather.xcdatamodeld */; };
@@ -33,6 +34,7 @@
 		0DC366961B78C43900B3F9D4 /* PMCityForecastTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DC366941B78C43900B3F9D4 /* PMCityForecastTableViewCell.m */; };
 		0DC366971B78C43900B3F9D4 /* PMCityForecastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DC366951B78C43900B3F9D4 /* PMCityForecastTableViewCell.xib */; };
 		14E66433D59D0DEC25BA96A7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32500372A7E274660E41AC10 /* libPods.a */; };
+		846F7329FC167599FE378EA3 /* IWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7770D211C433BB5D5238 /* IWeather.swift */; };
 		846F757B0948A574A028EEAD /* PMWorldWeatherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 846F794FC8B06FDA8F833C1B /* PMWorldWeatherService.m */; };
 		846F788BE1FD52A0E8A8BAC9 /* PMCoreDataCityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 846F7156625FDECAEB9F5C99 /* PMCoreDataCityProvider.m */; };
 /* End PBXBuildFile section */
@@ -50,20 +52,15 @@
 /* Begin PBXFileReference section */
 		05BE660C9101C12E960FED75 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		0C5D67E80467288B7B7CA937 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		0D11AE3D1B78846900A655BA /* IWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWeather.h; sourceTree = "<group>"; };
 		0D11AE3E1B7895E000A655BA /* PMWorldWeatherWeatherInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMWorldWeatherWeatherInfo.h; sourceTree = "<group>"; };
 		0D11AE3F1B7895E000A655BA /* PMWorldWeatherWeatherInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMWorldWeatherWeatherInfo.m; sourceTree = "<group>"; };
 		0D11AE411B789B3800A655BA /* PMWorldWeatherHourlyForecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMWorldWeatherHourlyForecast.h; sourceTree = "<group>"; };
 		0D11AE421B789B3800A655BA /* PMWorldWeatherHourlyForecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMWorldWeatherHourlyForecast.m; sourceTree = "<group>"; };
-		0D696A5E1B78FBDF00F2449B /* PMDomainEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMDomainEntity.h; sourceTree = "<group>"; };
-		0D696A5F1B78FBDF00F2449B /* PMDomainEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMDomainEntity.m; sourceTree = "<group>"; };
 		0D7EBD1F1B77D06C00FBCB4E /* ICityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICityProvider.h; sourceTree = "<group>"; };
 		0D7EBD201B77D09900FBCB4E /* PMWorldWeatherServiceApiProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMWorldWeatherServiceApiProvider.h; sourceTree = "<group>"; };
 		0D7EBD211B77D09900FBCB4E /* PMWorldWeatherServiceApiProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMWorldWeatherServiceApiProvider.m; sourceTree = "<group>"; };
 		0D7EBD9E1B77DD4400FBCB4E /* PMCityEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMCityEntity.h; sourceTree = "<group>"; };
 		0D7EBD9F1B77DD4400FBCB4E /* PMCityEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMCityEntity.m; sourceTree = "<group>"; };
-		0D7EBDA51B77E52B00FBCB4E /* PMCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMCity.h; sourceTree = "<group>"; };
-		0D7EBDA61B77E52B00FBCB4E /* PMCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMCity.m; sourceTree = "<group>"; };
 		0D7EBDAE1B780B5100FBCB4E /* PMCityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMCityTableViewCell.h; sourceTree = "<group>"; };
 		0D7EBDAF1B780B5100FBCB4E /* PMCityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMCityTableViewCell.m; sourceTree = "<group>"; };
 		0D7EBDB01B780B5100FBCB4E /* PMCityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMCityTableViewCell.xib; sourceTree = "<group>"; };
@@ -71,6 +68,12 @@
 		0D7EBDB41B7815E500FBCB4E /* PMAddCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMAddCityViewController.m; sourceTree = "<group>"; };
 		0D7EBDB61B7817EE00FBCB4E /* PMWorldWeatherCityQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMWorldWeatherCityQuery.h; sourceTree = "<group>"; };
 		0D7EBDB71B7817EE00FBCB4E /* PMWorldWeatherCityQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMWorldWeatherCityQuery.m; sourceTree = "<group>"; };
+		0D88065A1BA9F436002542CE /* ICity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICity.swift; sourceTree = "<group>"; };
+		0D88065C1BA9F462002542CE /* CityWeather-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CityWeather-Bridging-Header.h"; sourceTree = "<group>"; };
+		0D88065F1BA9F9E5002542CE /* CityWeather-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CityWeather-Prefix.pch"; sourceTree = "<group>"; };
+		0D8806601BA9FAE4002542CE /* PMCity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMCity.swift; sourceTree = "<group>"; };
+		0D8806621BA9FE5A002542CE /* PMDomainEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMDomainEntity.h; sourceTree = "<group>"; };
+		0D8806631BA9FE5A002542CE /* PMDomainEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMDomainEntity.m; sourceTree = "<group>"; };
 		0D8D51C91B77BA49001A6D6A /* CityWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8D51CD1B77BA49001A6D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D8D51CE1B77BA49001A6D6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -105,9 +108,9 @@
 		846F717359D5095027ABDDF4 /* PMWorldWeatherService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMWorldWeatherService.h; sourceTree = "<group>"; };
 		846F7270D91C7395F87D4123 /* ICityQueryObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICityQueryObject.h; sourceTree = "<group>"; };
 		846F75E2B6CE274469517714 /* IWeatherService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWeatherService.h; sourceTree = "<group>"; };
+		846F7770D211C433BB5D5238 /* IWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IWeather.swift; sourceTree = "<group>"; };
 		846F794FC8B06FDA8F833C1B /* PMWorldWeatherService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMWorldWeatherService.m; sourceTree = "<group>"; };
 		846F7A526B9D12503D704F1E /* PMCoreDataCityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMCoreDataCityProvider.h; sourceTree = "<group>"; };
-		846F7FB5F980784923FE28B8 /* ICity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICity.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,11 +146,12 @@
 		0D7EBDA41B77DDD900FBCB4E /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
-				846F7FB5F980784923FE28B8 /* ICity.h */,
 				846F7270D91C7395F87D4123 /* ICityQueryObject.h */,
-				0D11AE3D1B78846900A655BA /* IWeather.h */,
 				0DC3668E1B78BD5E00B3F9D4 /* IWeatherInfo.h */,
 				0DC3668F1B78C16800B3F9D4 /* IWeatherDayInfo.h */,
+				0D88065A1BA9F436002542CE /* ICity.swift */,
+				0D8806601BA9FAE4002542CE /* PMCity.swift */,
+				846F7770D211C433BB5D5238 /* IWeather.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -204,6 +208,8 @@
 				0D8D51CC1B77BA49001A6D6A /* Supporting Files */,
 				0D7EBDB31B7815E500FBCB4E /* PMAddCityViewController.h */,
 				0D7EBDB41B7815E500FBCB4E /* PMAddCityViewController.m */,
+				0D88065C1BA9F462002542CE /* CityWeather-Bridging-Header.h */,
+				0D88065F1BA9F9E5002542CE /* CityWeather-Prefix.pch */,
 			);
 			path = CityWeather;
 			sourceTree = "<group>";
@@ -249,8 +255,6 @@
 			children = (
 				0D7EBDA41B77DDD900FBCB4E /* Interfaces */,
 				0D7EBD351B77DD4400FBCB4E /* CoreData */,
-				0D7EBDA51B77E52B00FBCB4E /* PMCity.h */,
-				0D7EBDA61B77E52B00FBCB4E /* PMCity.m */,
 				0D7EBDB61B7817EE00FBCB4E /* PMWorldWeatherCityQuery.h */,
 				0D7EBDB71B7817EE00FBCB4E /* PMWorldWeatherCityQuery.m */,
 				0D11AE3E1B7895E000A655BA /* PMWorldWeatherWeatherInfo.h */,
@@ -278,12 +282,12 @@
 		0D8D51FC1B77BF39001A6D6A /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				0D8806621BA9FE5A002542CE /* PMDomainEntity.h */,
+				0D8806631BA9FE5A002542CE /* PMDomainEntity.m */,
 				0D8D51FD1B77BF6F001A6D6A /* PMPromise.h */,
 				0D8D51FE1B77BF6F001A6D6A /* PMPromise.m */,
 				0D8D52001B77BF8E001A6D6A /* PMPromiseBuilder.h */,
 				0D8D52011B77BF8E001A6D6A /* PMPromiseBuilder.m */,
-				0D696A5E1B78FBDF00F2449B /* PMDomainEntity.h */,
-				0D696A5F1B78FBDF00F2449B /* PMDomainEntity.m */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -469,11 +473,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D8D51FF1B77BF6F001A6D6A /* PMPromise.m in Sources */,
+				0D8806641BA9FE5A002542CE /* PMDomainEntity.m in Sources */,
 				0D7EBDA21B77DD4400FBCB4E /* PMCityEntity.m in Sources */,
 				0D8D51DB1B77BA49001A6D6A /* DetailViewController.m in Sources */,
 				0D7EBDB81B7817EE00FBCB4E /* PMWorldWeatherCityQuery.m in Sources */,
 				0D8D52021B77BF8E001A6D6A /* PMPromiseBuilder.m in Sources */,
-				0D7EBDA71B77E52B00FBCB4E /* PMCity.m in Sources */,
 				0D7EBD221B77D09900FBCB4E /* PMWorldWeatherServiceApiProvider.m in Sources */,
 				0D8D51D81B77BA49001A6D6A /* MasterViewController.m in Sources */,
 				0D11AE431B789B3800A655BA /* PMWorldWeatherHourlyForecast.m in Sources */,
@@ -482,13 +486,15 @@
 				0D11AE401B7895E000A655BA /* PMWorldWeatherWeatherInfo.m in Sources */,
 				0D7EBDB11B780B5100FBCB4E /* PMCityTableViewCell.m in Sources */,
 				0D8D51D21B77BA49001A6D6A /* AppDelegate.m in Sources */,
+				0D8806611BA9FAE4002542CE /* PMCity.swift in Sources */,
 				0DC366921B78C1BA00B3F9D4 /* PMWorldWeatherDailyForecast.m in Sources */,
-				0D696A601B78FBDF00F2449B /* PMDomainEntity.m in Sources */,
+				0D88065B1BA9F436002542CE /* ICity.swift in Sources */,
 				0D8D51CF1B77BA49001A6D6A /* main.m in Sources */,
 				846F788BE1FD52A0E8A8BAC9 /* PMCoreDataCityProvider.m in Sources */,
 				846F757B0948A574A028EEAD /* PMWorldWeatherService.m in Sources */,
 				0DC366961B78C43900B3F9D4 /* PMCityForecastTableViewCell.m in Sources */,
 				0D7EBDB51B7815E500FBCB4E /* PMAddCityViewController.m in Sources */,
+				846F7329FC167599FE378EA3 /* IWeather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,9 +623,14 @@
 			baseConfigurationReference = 0C5D67E80467288B7B7CA937 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/CityWeather/CityWeather-Prefix.pch";
 				INFOPLIST_FILE = CityWeather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CityWeather/CityWeather-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -629,9 +640,13 @@
 			baseConfigurationReference = 05BE660C9101C12E960FED75 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/CityWeather/CityWeather-Prefix.pch";
 				INFOPLIST_FILE = CityWeather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CityWeather/CityWeather-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;

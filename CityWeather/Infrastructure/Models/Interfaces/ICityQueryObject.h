@@ -3,13 +3,9 @@
 // Copyright (c) 2015 Bula doo. All rights reserved.
 //
 
-#import "ICity.h"
+#import "CityWeather-Swift.h"
 
 @protocol ICityQueryObject <ICity>
-
-@property (nonatomic, strong) NSString * name;
-@property (nonatomic, strong) NSString * state;
-@property (nonatomic, strong) NSString * country;
 
 - (NSString *)stringValue;
 

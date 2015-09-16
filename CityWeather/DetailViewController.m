@@ -8,7 +8,6 @@
 
 #import "DetailViewController.h"
 #import "PMWorldWeatherService.h"
-#import "ICity.h"
 #import "IWeatherInfo.h"
 #import "PMCityForecastTableViewCell.h"
 

@@ -7,14 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "IWeather.h"
 #import "PMDomainEntity.h"
 
 @interface PMWorldWeatherHourlyForecast : PMDomainEntity<IWeather>
 
 @property (nonatomic, strong) NSDate * date;
-@property (nonatomic, strong) NSString * iconName;
-@property (nonatomic, strong) NSString * temperatureCelsius;
-@property (nonatomic, strong) NSString * forecast;
+@property (nonatomic, copy) NSString * iconName;
+@property (nonatomic, copy) NSString * temperatureCelsius;
+@property (nonatomic, copy) NSString * forecast;
 
 @end
